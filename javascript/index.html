@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta de Lámparas 3D</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Lámparas 3D</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center mt-5">
+    <h1>Bienvenido a nuestra tienda de Lámparas 3D</h1>
+    <p>Descubre nuestra colección de lámparas inspiradas en planetas y el universo.</p>
+
+    <section id="productos" class="mt-4">
+      <h2>Nuestros Productos</h2>
+      <div id="productos-container" class="row">
+        <!-- Lámpara Luna 3D -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./images/luna.png" alt="Lámpara Luna 3D" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Lámpara Luna 3D</h5>
+              <p class="card-text">Precio: $15000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Lámpara Via Lactea 3D -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./images/vialactea.png" alt="Lámpara Via Lactea 3D" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Lámpara Via Lactea 3D</h5>
+              <p class="card-text">Precio: $12000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Lámpara Saturno 3D -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./images/saturno.png" alt="Lámpara Saturno 3D" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Lámpara Saturno 3D</h5>
+              <p class="card-text">Precio: $16000</p>
+            </div>
+          </div>
+        </div>
+        <!-- Lámpara Sistema Solar 3D -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./images/sistemasolar.png" alt="Lámpara Sistema Solar 3D" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Lámpara Sistema Solar 3D</h5>
+              <p class="card-text">Precio: $10000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="carrito" class="mt-4">
+      <h2>Carrito de Compras</h2>
+      <ul id="carrito-lista" class="list-group"></ul>
+      <p id="total" class="mt-3"><strong>Total: $0</strong></p>
+      <button id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</button>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./javascript/main.js"></script>
+</body>
+
+</html>
