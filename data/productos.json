@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "nombre": "Lámpara Luna 3D",
+      "precio": 15000,
+      "img": "./images/luna.png",
+      "alt": "Lámpara Luna 3D"
+    },
+    {
+      "id": 2,
+      "nombre": "Lámpara Via Lactea 3D",
+      "precio": 12000,
+      "img": "./images/vialactea.png",
+      "alt": "Lámpara Via Lactea 3D"
+    },
+    {
+      "id": 3,
+      "nombre": "Lámpara Saturno 3D",
+      "precio": 16000,
+      "img": "./images/saturno.png",
+      "alt": "Lámpara Saturno 3D"
+    },
+    {
+      "id": 4,
+      "nombre": "Lámpara Sistema Solar 3D",
+      "precio": 10000,
+      "img": "./images/sistemasolar.png",
+      "alt": "Lámpara Sistema Solar 3D"
+    }
+  ]
+  
