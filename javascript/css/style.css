@@ -1,114 +1,215 @@
-/* generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Poppins", sans-serif;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h5 {
+  font-family: "Orbitron", sans-serif;
+  padding-bottom: 12px;
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+  background: rgba(0, 0, 0, 0.363);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 10px 15px rgba(255, 187, 0, 0.8);
 }
 
-/* tarjeta */
+nav.navbar {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+nav.navbar .navbar-brand,
+nav.navbar .nav-link {
+  color: #f1f1f1 !important;
+}
+
+nav.navbar .navbar-brand:hover,
+nav.navbar .nav-link:hover {
+  color: #ffbb00 !important;
+}
+
+nav.navbar .btn i {
+  color: #ffbb00 !important;
+}
+
+nav.navbar .btn i:hover {
+  color: #ffd500 !important;
+}
+
+.custom-btn {
+  background-color: #ffbb00;
+  color: #000;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.custom-btn:hover {
+  background-color: #ffd500;
+}
+
+.custom-badge {
+  background-color: #ff3d00;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+h2 {
+  color: #ffbb00;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+section#productos {
+  margin-top: 40px;
+}
+
 .card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    transition: transform 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffd500;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 187, 0, 0.5);
 }
 
 .card-img-top {
-    width: 100%;
-    height: 270px;
-    object-fit: cover;
+  height: 270px;
+  object-fit: cover;
+  border-bottom: 1px solid #ffd500;
 }
 
 .card-body {
-    text-align: center;
+  text-align: center;
 }
 
-/* Botones */
 .btn-primary {
-    background-color: #007bff;
-    border: none;
+  background-color: #ffbb00;
+  color: #000;
+  border: none;
+  font-weight: bold;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #ffd500;
 }
 
-/* Carrito */
 #carrito {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 20px auto;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 12px;
+  padding: 20px;
 }
 
+#total {
+  font-size: 1.5rem;
+  color: #ffbb00;
+}
 
+.custom-footer {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px 0;
+  text-align: center;
+  color: #ffffff;
+}
 
-/* Media Queries */
+.custom-footer p {
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.text-custom {
+  color: #ffbb00 !important;
+}
+
+.text-custom:hover {
+  color: #ffd500 !important;
+}
+
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
+  .container {
+    padding: 10px;
+  }
 
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
 
-    .card-img-top {
-        height: 120px; /* Imágenes más chicas */
-    }
+  .card-img-top {
+    height: 250px;
+  }
 
-    #productos-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  #productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .col-md-4 {
-        width: 48%; /* Más columnas, más filas */
-        max-width: 48%; 
-        margin: 1%; /* Para dejar un poquito de espacio entre las columnas */
-    }
+  .col-md-4 {
+    width: 48%;
+    max-width: 48%;
+    margin: 1%;
+  }
+
+  .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 5px;
-    }
+  .container {
+    padding: 5px;
+  }
 
-    .navbar-brand {
-        font-size: 1rem;
-    }
+  .navbar-brand {
+    font-size: 1rem;
+  }
 
-    .card-img-top {
-        height: 100px; /* Aún más chicas para pantallas más chicas */
-    }
+  .card-img-top {
+    height: 350px;
+  }
 
-    .btn-primary {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
 
-    #carrito {
-        padding: 10px;
-    }
+  #carrito {
+    padding: 10px;
+  }
 
-    .col-md-4 {
-        width: 100%; /* En pantallas muy chicas, una sola columna */
-        max-width: 100%;
-    }
+  .col-md-4 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 85%;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

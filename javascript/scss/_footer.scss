@@ -1,0 +1,22 @@
+   @use "reset";
+
+   .custom-footer {
+     background: reset.$dark-bg;
+     padding: 20px 0;
+     text-align: center;
+     color: #ffffff;
+
+     p {
+       color: #ffffff;
+       font-size: 1rem;
+       margin: 0;
+     }
+   }
+
+   .text-custom {
+     color: reset.$main-color !important;
+
+     &:hover {
+       color: reset.$highlight-color !important;
+     }
+   }

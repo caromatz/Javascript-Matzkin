@@ -1,0 +1,66 @@
+@use "reset";
+
+// Media Queries
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .card-img-top {
+    height: 250px;
+  }
+
+  #productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-md-4 {
+    width: 48%;
+    max-width: 48%;
+    margin: 1%;
+  }
+
+  .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .card-img-top {
+    height: 350px;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  #carrito {
+    padding: 10px;
+  }
+
+  .col-md-4 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 85%;
+  }
+}

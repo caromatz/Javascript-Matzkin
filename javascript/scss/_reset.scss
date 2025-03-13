@@ -1,0 +1,23 @@
+  // Variables
+  $main-color: #ffbb00;
+  $highlight-color: #ffd500;
+  $dark-bg: rgba(0, 0, 0, 0.9);
+  $light-text: #f1f1f1;
+  $danger-color: #ff3d00;
+
+
+  // Reset
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  // Generales
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: $light-text;
+    margin: 0;
+    padding: 0;
+  }

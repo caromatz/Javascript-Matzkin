@@ -1,0 +1,41 @@
+@use "reset";
+
+section#productos {
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid reset.$highlight-color;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 187, 0, 0.5);
+  }
+
+  &-img-top {
+    height: 270px;
+    object-fit: cover;
+    border-bottom: 1px solid reset.$highlight-color;
+  }
+
+  &-body {
+    text-align: center;
+  }
+}
+
+.btn-primary {
+  background-color: reset.$main-color;
+  color: #000;
+  border: none;
+  font-weight: bold;
+
+  &:hover {
+    background-color: reset.$highlight-color;
+  }
+}

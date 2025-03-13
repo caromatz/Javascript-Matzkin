@@ -5,15 +5,14 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const productosContainer = document.getElementById("productos-container");
 let productos = [];
 
-// Función para mostrar productos
 async function mostrarProductos() {
   try {
     const response = await fetch('../data/productos.json');
     if (!response.ok) throw new Error('Error al cargar los productos');
-    
-    productos = await response.json(); // Guardar los productos cargados en la variable global
 
-    productosContainer.innerHTML = ""; // Limpiar el contenedor
+    productos = await response.json();
+
+    productosContainer.innerHTML = "";
 
     productos.forEach((producto) => {
       const div = document.createElement("div");
@@ -57,7 +56,7 @@ function agregarAlCarrito(id) {
 
   localStorage.setItem("carrito", JSON.stringify(carrito));
   actualizarCarrito();
-  
+
   Toastify({
     text: `${producto.nombre} agregado al carrito!`,
     duration: 3000,
@@ -67,8 +66,6 @@ function agregarAlCarrito(id) {
     backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
   }).showToast();
 }
-
-
 
 // Mostrar carrito en el offcanvas
 const carritoLista = document.getElementById("carrito-lista");
@@ -140,6 +137,7 @@ document.getElementById("vaciar-carrito").addEventListener("click", () => {
   });
 });
 
+
 // Mostrar modal de compra
 const modalCompra = new bootstrap.Modal(document.getElementById("modalCompra"));
 const formularioFactura = document.getElementById("form-factura");
@@ -152,10 +150,9 @@ document.getElementById("comprar-btn").addEventListener("click", () => {
   modalCompra.show();
 });
 
-
 formularioFactura.addEventListener('submit', (e) => {
   e.preventDefault();
-  
+
   const nombre = document.getElementById('nombre').value;
   const direccion = document.getElementById('direccion').value;
   const email = document.getElementById('email').value;
@@ -163,7 +160,7 @@ formularioFactura.addEventListener('submit', (e) => {
   const fechaVencimiento = document.getElementById('fechaVencimiento').value;
   const codigoSeguridad = document.getElementById('codigoSeguridad').value;
 
-  // Validación básica (puedes mejorarla después)
+
   if (!numeroTarjeta.match(/^\d{4} \d{4} \d{4} \d{4}$/)) {
     alert('Por favor, ingresa un número de tarjeta válido');
     return;
@@ -196,3 +193,4 @@ formularioFactura.addEventListener('submit', (e) => {
 // Inicializar productos y carrito
 mostrarProductos();
 actualizarCarrito();
+
